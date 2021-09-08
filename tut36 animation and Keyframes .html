@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes and Animations</title>
+    <style>
+        .container{
+            background-color: rgb(94, 215, 219);
+            height: 10em;
+            color: white;
+        }
+ 
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            height: 36vh;
+            width: 12vw;
+            position: relative;
+            
+            
+ 
+ 
+ 
+            /* step-1 set animation name your wish */
+            /* animation-name: shyam1; */
+            /* or */
+            animation-name: shyam2;
+            
+ 
+ 
+ 
+ 
+            /* step-2 set animation-duration: how many secounds */
+            animation-duration: 3s;
+ 
+ 
+ 
+ 
+ 
+            /* step-3 set animation-iteration-count: how many times to repeat;*/
+            animation-iteration-count: infinite;
+            
+ 
+ 
+ 
+ 
+            /* Below one is mode to fill */
+            /* animation-fill-mode: backwards; */
+ 
+ 
+ 
+ 
+ 
+            /* It is used to control the speed while starting(in) ending(out) */
+            /* animation-timing-function: 
+            ease-in-out; */
+ 
+ 
+ 
+ 
+ 
+            /* It is used to delay the animation to start */
+            /* animation-delay: 0.5s; */
+ 
+ 
+ 
+ 
+ 
+            /* It is used for direction */
+            /* animation-direction: reverse; */
+ 
+ 
+ 
+            /* animation shorthand is animation: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, animation-play-state;*/
+            animation: shyam2 3s ease 0.5s 3 reverse backwards ;
+            
+ 
+ 
+        }
+ 
+        /* step=4 set @keyframes and enter animation name  */
+        @keyframes shyam2 {
+            /* To work percentage(%) properties, we must add display property in respective element   */
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+ 
+            50%{
+                top: 250px;
+                left: 250px;
+                
+            }
+            75%{
+                top:0px;
+                left:250px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+ 
+        }
+        @keyframes shyam1{
+            /* step-5 set from and to properties */
+            from {
+                width: 5vw;
+                height: 5vh;
+                background-color:rgb(168, 130, 130);
+                color: white;
+                font-size: 0.1em;
+            }
+            to{
+                width: 60vw;
+                height: 50vh;
+                background-color:rgb(255, 255, 255);
+                color: black;
+                font-size: 2em;
+                
+ 
+ 
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+             This is animation box
+        </div>
+    </div>
+</body>
+</html>
+

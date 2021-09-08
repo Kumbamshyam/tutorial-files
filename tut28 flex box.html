@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=l, initial-scale=1.0">
+    <title>flexbox tutorial</title>
+    <style>
+        .container {
+            height: 800px;
+            width: auto;
+            border: 2px solid black;
+            /* don't use static value in display property. static value will not work with flex properties */
+            display: flex;
+ 
+ 
+            /* flex direction is used to change the direction from vertical to horizontal, horizontal to vertical,  */
+            flex-direction: column;
+ 
+ 
+            /* flex wrap is used to wrap the elements in any device that supports*/
+ 
+            flex-wrap: wrap;
+ 
+ 
+            /* flex flow property is used to add both felx direction and flex wrap  */
+ 
+            flex-flow: column-reverse   wrap;
+ 
+ 
+            /* The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally). */
+ 
+            justify-content: space-around;
+ 
+            /* align item is used to align element or items (vertically)*/
+            align-items: center;
+ 
+ 
+        }
+ 
+        /* flex properties for a flex items */
+        /* higher value elements will jump at last place and lower value elements will jump at first place */
+        #item-1 {
+            order: 10;
+        }
+ 
+        #item-2 {
+            order: 9;
+        }
+ 
+        #item-3 {
+            order: 8;
+ 
+        }
+ 
+        #item-4 {
+            order: 7;
+        }
+ 
+        #item-5 {
+            order: 6;
+        }
+ 
+        #item-6 {
+            order: 5;
+        }
+ 
+        #item-1 {
+            /* The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside the same container. */
+            flex-grow: 4;
+/* 
+            The flex-shrink property specifies how the item will shrink relative to the rest of the flexible items inside the same container. */
+            flex-shrink: 8;
+ 
+            /* The flex-basis property specifies the initial length of a flexible item. */
+ 
+            /* Note: If the element is not a flexible item, the flex-basis property has no effect. */
+ 
+            /* when flex-direction is set to row flex-basis: will control width */
+ 
+            /* when flex-direction is set to column flex-basis: will control height */
+            flex-basis: 260px;
+        }
+ 
+        #item-3{
+            /* The flex property is a shorthand property for:
+            flex-grow
+            flex-shrink
+            flex-basis
+            The flex property sets the flexible length on flexible items.
+            Note: If the element is not a flexible item, the flex property has no effect. */
+            flex: 2 2 200px;
+        }
+ 
+        #item-1{
+            align-self: center;
+        }
+ 
+ 
+        .item {
+            width: 180px;
+            height: 100px;
+            padding: 2px;
+            margin: 3px;
+            background-color: tomato;
+            border: 2px solid rgb(4, 0, 255);
+ 
+ 
+ 
+        }
+ 
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h1>This is flexbox tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First box</div>
+        <div class="item" id="item-2">Scound box</div>
+        <div class="item" id="item-3">Third box</div>
+        <div class="item" id="item-4">Fourth box</div>
+        <div class="item" id="item-5">Fifth box</div>
+        <div class="item" id="item-6">Sixth box</div>
+    </div>
+</body>
+ 
+</html>
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=l, initial-scale=1.0">
+    <title>flexbox tutorial</title>
+    <style>
+        .container {
+            height: 800px;
+            width: auto;
+            border: 2px solid black;
+            /* don't use static value in display property. static value will not work with flex properties */
+            display: flex;
+ 
+ 
+            /* flex direction is used to change the direction from vertical to horizontal, horizontal to vertical,  */
+            flex-direction: column;
+ 
+ 
+            /* flex wrap is used to wrap the elements in any device that supports*/
+ 
+            flex-wrap: wrap;
+ 
+ 
+            /* flex flow property is used to add both felx direction and flex wrap  */
+ 
+            flex-flow: column-reverse   wrap;
+ 
+ 
+            /* The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally). */
+ 
+            justify-content: space-around;
+ 
+            /* align item is used to align element or items (vertically)*/
+            align-items: center;
+ 
+ 
+        }
+ 
+        /* flex properties for a flex items */
+        /* higher value elements will jump at last place and lower value elements will jump at first place */
+        #item-1 {
+            order: 10;
+        }
+ 
+        #item-2 {
+            order: 9;
+        }
+ 
+        #item-3 {
+            order: 8;
+ 
+        }
+ 
+        #item-4 {
+            order: 7;
+        }
+ 
+        #item-5 {
+            order: 6;
+        }
+ 
+        #item-6 {
+            order: 5;
+        }
+ 
+        #item-1 {
+            /* The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside the same container. */
+            flex-grow: 4;
+/* 
+            The flex-shrink property specifies how the item will shrink relative to the rest of the flexible items inside the same container. */
+            flex-shrink: 8;
+ 
+            /* The flex-basis property specifies the initial length of a flexible item. */
+ 
+            /* Note: If the element is not a flexible item, the flex-basis property has no effect. */
+ 
+            /* when flex-direction is set to row flex-basis: will control width */
+ 
+            /* when flex-direction is set to column flex-basis: will control height */
+            flex-basis: 260px;
+        }
+ 
+        #item-3{
+            /* The flex property is a shorthand property for:
+            flex-grow
+            flex-shrink
+            flex-basis
+            The flex property sets the flexible length on flexible items.
+            Note: If the element is not a flexible item, the flex property has no effect. */
+            flex: 2 2 200px;
+        }
+ 
+        #item-1{
+            align-self: center;
+        }
+ 
+ 
+        .item {
+            width: 180px;
+            height: 100px;
+            padding: 2px;
+            margin: 3px;
+            background-color: tomato;
+            border: 2px solid rgb(4, 0, 255);
+ 
+ 
+ 
+        }
+ 
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h1>This is flexbox tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First box</div>
+        <div class="item" id="item-2">Scound box</div>
+        <div class="item" id="item-3">Third box</div>
+        <div class="item" id="item-4">Fourth box</div>
+        <div class="item" id="item-5">Fifth box</div>
+        <div class="item" id="item-6">Sixth box</div>
+    </div>
+</body>
+ 
+</html>
+

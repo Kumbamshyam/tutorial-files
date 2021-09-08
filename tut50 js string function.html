@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript string functions</title>
+    <link rel="shortcut icon" type="image/png" href="../logo/Untitled design.png"  >
+</head>
+
+<body>
+    <h1 id="shyam"></h1>
+
+    <script>
+        var str = "i'm string";
+        var sup = "Hello, dude! 'how are you'";
+        console.log(str)
+        console.log(str[2]+str[6]);
+        document.getElementById('shyam').innerHTML = str[4]+str[6]+sup;
+        
+        
+        
+        // the following are the string functions 
+        
+        // it show the starting position number of a 
+        var position = str.indexOf("i");
+        console.log(position);
+        
+        
+        // it show the last position number of a 
+        var position = str.lastIndexOf("g");
+        console.log(position);
+        
+        
+        // substring means parts of string line 
+        // it show's the selected index letters 
+        // in this slice paranthese we must add from index and to index, 0,11 are the parameter
+        var subs = str.slice(0, 11);
+        console.log(subs);
+        
+        
+        // subsrting take's negetive values compare to slice
+        var subs = str.substring(0, 11);
+        console.log(subs);
+        
+        
+        // Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+        var subs = str.substr(1, 11);
+        console.log(subs);
+        
+
+
+        var shiva = "     HEY I'M SHIVA    "
+        console.log(shiva);
+        
+        //it will replace the value of str1 to str //  Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
+        var replace = str.replace(shiva, str);
+        console.log(replace);
+        
+
+        //it change small letter to uppercase or capital letter
+        var upperCase = str.toUpperCase('shiva');
+        console.log(upperCase);
+
+    
+        //it changes the capital letter to small letter
+        var lowerCase = str.toLowerCase('shiva');
+        console.log(lowerCase);
+
+
+        //it will trim the white space at the beggining and ending
+        var whiteSpace = "       hello       world            "
+        // var trim = str.trim(whiteSpace);
+        console.log(whiteSpace);
+        console.log(str.trim(whiteSpace));
+
+        
+    </script>
+</body>
+
+</html>
